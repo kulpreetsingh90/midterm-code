@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UZa-TI-ga1">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,22 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-6H-diQ">
-                                <rect key="frame" x="67" y="129" width="241" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="72"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-9C-vfO">
-                                <rect key="frame" x="67" y="528" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-9C-vfO">
+                                <rect key="frame" x="86.5" y="718" width="34" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -41,9 +30,17 @@
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fkM-FP-QRR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-gU-GU1">
-                                <rect key="frame" x="276" y="528" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-6H-diQ">
+                                <rect key="frame" x="86.5" y="152" width="241" height="83"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-gU-GU1">
+                                <rect key="frame" x="295.5" y="718" width="32" height="30"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -53,6 +50,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ukh-9C-vfO" secondAttribute="bottom" constant="114" id="8Ns-C0-Mg9"/>
+                            <constraint firstItem="pvj-gU-GU1" firstAttribute="baseline" secondItem="Ukh-9C-vfO" secondAttribute="baseline" id="Pxu-vg-4Mb"/>
+                            <constraint firstItem="pvj-gU-GU1" firstAttribute="trailing" secondItem="uM1-6H-diQ" secondAttribute="trailing" id="b7g-sO-qRW"/>
+                            <constraint firstItem="Ukh-9C-vfO" firstAttribute="leading" secondItem="uM1-6H-diQ" secondAttribute="leading" id="mbK-Jg-dBL"/>
+                            <constraint firstItem="uM1-6H-diQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nti-ll-bSb"/>
+                            <constraint firstItem="uM1-6H-diQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="vQU-sK-l2Q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9wG-Rx-QuF">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WLU-fr-dyZ">
@@ -79,12 +84,11 @@
                         <viewControllerLayoutGuide type="bottom" id="8dy-wi-I5h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IVY-FA-18f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-Jx-oEV">
-                                <rect key="frame" x="140" y="318" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-Jx-oEV">
+                                <rect key="frame" x="160" y="433" width="94" height="30"/>
                                 <state key="normal" title="Change Color"/>
                                 <connections>
                                     <action selector="colorChange:" destination="c9D-Oy-FSs" eventType="touchUpInside" id="GMb-BL-Fbz"/>
@@ -92,6 +96,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mM0-Jx-oEV" firstAttribute="centerX" secondItem="IVY-FA-18f" secondAttribute="centerX" id="NbD-4t-1Nj"/>
+                            <constraint firstItem="mM0-Jx-oEV" firstAttribute="centerY" secondItem="IVY-FA-18f" secondAttribute="centerY" id="uKf-9H-PvO"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -106,7 +114,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UZa-TI-ga1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vqP-iT-Vnx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
