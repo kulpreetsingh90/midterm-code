@@ -7,7 +7,21 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ColorChangeDelegate {
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    func userDidClick(data: String) {
+        
+        timerLabel.textColor = UIColor.orange
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSendingVc" {
+            let changeColor: EditViewController = segue.destination as! EditViewController
+            changeColor.delegate = self
+        }
+    }
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     let stopwatch = Stopwatch()
